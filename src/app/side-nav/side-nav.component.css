@@ -1,0 +1,148 @@
+.sidebar{
+    background-color: rgb(2, 58, 58);
+    transition: all 0.5s ease;
+    position: fixed;
+    z-index: 222;
+    top:0;
+    width: 5rem;
+    height: 100vh;
+    box-shadow: 0.063rem 0 0.3rem 0 #8690a3;
+    /* overflow-y: auto ; */
+}
+
+.logo-container{
+    display: flex;
+    align-items: center;
+    padding:0.9rem;
+    width:100%;
+
+}
+
+.logo{
+    background-color: #fff;
+    text-align: center;
+    width: 3rem;
+    min-width: 3rem;
+    border-radius: 0.3rem;
+    padding: 0.3rem;
+    font-size: 16px;
+    font-weight: 800;
+    cursor: pointer;
+    border:none;
+    font-family: 'Pacifico', cursive;
+    /* text-shadow: 1px 1px 1px #525151; */
+
+
+}
+.logo-text{
+    margin-left: 1.5rem;
+    font-size: 24px;
+    font-weight: 700;
+    color:rgb(234, 236, 236);
+    cursor: pointer;
+
+}
+
+.btn-close{
+    margin-left: auto;
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border:none;
+}
+.fa-x{
+    color: #cccaca;
+    font-size: 20px;
+}
+
+.sidenav-collapsed{
+    width: 16rem;
+
+}
+
+.sidenav-nav{
+    list-style: none;
+    padding:0.8rem 0.4rem;
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 3.65rem);
+    cursor:pointer;
+   transition: all 0.3s ease;
+    overflow-y: auto;
+
+}
+
+.sidenav-nav-item{
+    width: 100%;
+    /* margin-inline-end: 0.6rem; */
+    margin-block-end: 0.2rem;
+}
+
+.sidenav-link{
+    display: flex;
+    align-items: center;
+    height:3rem;
+    color:#d8d7d7;
+    text-decoration: none;
+   transition: all 0.3s ease;
+   border-radius: 0.5rem;
+
+}
+
+.sidenav-icon{
+    font-size: 20px;
+    width: 2rem;
+    min-width: 2rem;
+    margin: 0 0.2rem;
+    text-align: center;
+
+}
+
+.sidenav-text{
+    margin-inline-start: 0.8rem;
+
+}
+
+ /* .sidenav-nav-item:hover .sidenav-link:not(.sidenav-nav-item .sidemenue){
+    background-color:rgb(169, 206, 206);
+    color:rgb(1, 46, 46);
+}  */
+
+
+.active{
+
+    background-color:rgb(169, 206, 206);
+    color:rgb(1, 46, 46);
+}
+
+.submenu{
+
+    transition: all 0.3s ease;
+
+}
+.submenu li{
+    color:#8690a3;
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    padding:0.2rem ;
+}
+.submenu li .sidenav-link{
+    width: 100%;
+}
+
+.submenu .sidenav-link:hover{
+    color:rgb(247, 250, 250);
+}
+
+
+
+
+
+
+

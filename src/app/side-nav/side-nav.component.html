@@ -1,0 +1,46 @@
+<div class="sidebar" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">logo  </button>
+    <div class="logo-text" *ngIf="collapsed" @fadeInOut [routerLink]="'/'">Admin</div>
+    <button class="btn-close" *ngIf="collapsed"  (click)="closeSidenav()" >
+        <i class="fa-solid fa-x"></i>
+    </button>
+  </div>
+
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navbarData;let ind=index" 
+    [class]="data.items && collapsed ?'subMenu':''">
+      <a class="sidenav-link" [routerLink]="[data?.routerlink]"
+         [routerLinkActive]="'active'"
+         [routerLinkActiveOptions]="{exact:true}" 
+         (click)="openSubMenueMange(data?.items?.length,data)"
+         (click)="openSubMenueHr(data?.items?.length,data)"
+         >
+        <i class="sidenav-icon" [class]="data.icon"></i>
+        <span class="sidenav-text" @fadeInOut *ngIf="collapsed">{{data.label}}</span>
+        <i class="fa-solid fa-angle-down ps-2 p-2" *ngIf="collapsed && data.items " ></i>
+        <!-- <i class="fa-solid fa-angle-up ps-2 p-2"   *ngIf="collapsed && data.items && !closedbtn" ></i> -->
+      </a>
+      <ul class="submenu" *ngIf="data.items && collapsed &&(!closedMange) && data.label=='Binding Management'">
+        <li *ngFor="let i of data.items">
+          <a class="sidenav-link" [routerLink]="[i.routerlink]" >
+            <i class="fa-solid fa-minus"></i>
+  
+            <span class="sidenav-text" *ngIf="collapsed">{{i.label}}</span>
+       </a>
+        </li>
+      </ul>
+
+      <ul class="submenu" *ngIf="data.items && collapsed &&(!closedHr) && data.label=='HR'">
+        <li *ngFor="let i of data.items">
+          <a class="sidenav-link" [routerLink]="[i.routerlink]" >
+            <i class="fa-solid fa-minus"></i>
+  
+            <span class="sidenav-text" *ngIf="collapsed">{{i.label}}</span>
+       </a>
+        </li>
+      </ul> 
+    </li>
+    
+  </ul>
+</div>

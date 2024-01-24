@@ -1,0 +1,49 @@
+.header{
+    width: calc(100% - 5rem);
+    height: 3rem;
+    margin-left: 5rem;
+    position: fixed;
+    z-index: 222;
+    top:0;
+    transition: all 0.5s ease;
+    /* background-color: rgb(2, 58, 58); */
+    display: flex;
+    align-items: center;
+
+    /* padding: 3rem; */
+
+}
+
+.body-trimmed{
+width: calc(100% - 16rem);
+margin-inline-start: 16rem;
+}
+
+.body-md-screen{
+width: calc(100% - 5rem);
+margin-inline-start: 5rem;
+
+}
+
+
+
+
+.navedit{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-inline: 1rem;
+
+}
+
+    
+    .profile-pic{
+        width: 2.2rem;
+        height: 2.2rem;
+        border-radius: 50%;
+        margin-inline: 5px;
+    }
+    
+    .navbar{
+        padding-block: 0 !important;
+    }
