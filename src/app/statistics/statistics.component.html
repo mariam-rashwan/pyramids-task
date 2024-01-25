@@ -1,0 +1,57 @@
+<section class="barChart">
+  <canvas
+  baseChart
+  class="chart"
+  [data]="barChartData"
+  [options]="barChartOptions"
+  [type]="barChartType"
+  (chartHover)="chartHovered($event)"
+  (chartClick)="chartClicked($event)"
+>
+</canvas>
+
+<div class="py-3 d-flex justify-content-center">
+  <button mat-button mat-raised-button color="primary" class="btn  btn-dark " (click)="randomize()">
+    UPDATE
+  </button>
+</div>
+</section>
+<!-- 
+  [plugins]="barChartPlugins"
+
+ -->
+
+
+<div class="formateCharts">
+  <section  class="polarAreaChartData" 
+  >
+   <canvas
+   baseChart
+   class="chart"
+   [data]="polarAreaChartData"
+   [legend]="polarAreaLegend"
+   [type]="polarAreaChartType"
+ >
+ </canvas>
+ 
+  </section>
+ 
+  <section  class="pieChartData" >
+    <canvas
+    baseChart
+    class="chart "
+    [data]="pieChartData"
+    [type]="pieChartType"
+    [options]="pieChartOptions"
+  >
+  
+  </canvas>
+ 
+ 
+ </section>
+</div>
+
+<div class="mt-2">
+  <app-animate-chart></app-animate-chart>
+
+</div>

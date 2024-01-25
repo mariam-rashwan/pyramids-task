@@ -4,7 +4,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {path:'',redirectTo:"dashboard",pathMatch:'full'},
-  {path:"dashboard",component:DashboardComponent,title:'Dashboard'},
+  {path:"dashboard",loadComponent: () => import('./dashboard/dashboard.component').then((c) => c.DashboardComponent), title: 'dashboard' },
   {path: 'projects', loadComponent: () => import('./projects/projects.component').then((c) => c.ProjectsComponent), title: 'projects' },
   {path: 'teams', loadComponent: () => import('./teams/teams.component').then((c) => c.TeamsComponent), title: 'teams' },
   {path: 'projectManagement', loadComponent: () => import('./project-management/project-management.component').then((c) => c.ProjectManagementComponent), title: 'project management' },

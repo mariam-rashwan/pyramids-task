@@ -1,0 +1,34 @@
+.formateCharts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.polarAreaChartData{
+    position: relative;
+     height:70vh;
+      width:50%
+}
+.pieChartData{
+    position: relative;
+     height:60vh; 
+     width:50%;
+}
+
+@media screen and (max-width: 768px) {
+.formateCharts{
+    flex-direction: column;
+    justify-content:center;
+
+}
+    .pieChartData{
+        width:100%; 
+        padding-top: 2rem;
+
+    }
+    .polarAreaChartData {
+        width:100%; 
+        padding-top: 2rem;
+    }
+}
